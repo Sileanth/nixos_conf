@@ -52,7 +52,7 @@ i18n.extraLocaleSettings = {
     };
    
     displayManager = {
-        sdd.enable = true;
+        sddm.enable = true;
 	defaultSession = "none+i3";
     };
 
