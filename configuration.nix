@@ -96,6 +96,7 @@ spotify
 discord
 
 gh
+gitkraken
 git
 neovim      
 firefox
