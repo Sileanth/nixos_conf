@@ -43,18 +43,17 @@ i18n.extraLocaleSettings = {
 
   # Enable the X11 windowing system.
 
-  # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
   services.xserver = {
     enable = true;
 
     desktopManager = {
       xterm.enable = false;
+      plasma5.enable = true;
     };
    
     displayManager = {
-        defaultSession = "none+i3";
+        sdd.enable = true;
+	defaultSession = "none+i3";
     };
 
     windowManager.i3 = {
