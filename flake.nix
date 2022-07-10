@@ -2,10 +2,10 @@
   
   inputs = {
 	nixpkgs.url = "nixpkgs/nixos-unstable";
-	#home-manager.url = "github:nix-community/home-manager/master";
-	#home-manager.inputs.nixpkgs.follows = "nixpkgs";
+  	home-manager.url = "github:nix-community/home-manager";
+    	home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
-  outputs = {nixpkgs, ... }:  #home-manager
+  outputs = inputs@{nixpkgs, home-manager, ... }:  
 	let
 		system = "x86_64-linux";
 
@@ -24,7 +24,14 @@
 				inherit system;
 
 				modules = [
-					./configuration.nix					
+					./configuration.nix
+					 home-manager.nixosModules.home-manager {
+            					home-manager.useGlobalPkgs = true;
+            					home-manager.useUserPackages = true;
+            					home-manager.users.sileanth = import ./home.nix;
+            					# Optionally, use home-manager.extraSpecialArgs to pass
+           					 # arguments to home.nix
+          				}
 				];
 			};
 		};
