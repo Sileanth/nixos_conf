@@ -32,12 +32,13 @@ nix.extraOptions = ''
   experimental-features = nix-command flakes
 '';
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.utf8";
-
-  i18n.extraLocaleSettings = {
+i18n.supportedLocales = [
+  "en_US.UTF-8/UTF-8"
+  ];
+i18n.extraLocaleSettings = {
     LC_ADDRESS = "pl_PL.utf8";
     LC_IDENTIFICATION = "pl_PL.utf8";
-    LC_MEASUREMENT = "pl_PL.utf8";
+    LC_MEASUREMENT = "pl_PL.utf8";                                                                                  
     LC_MONETARY = "pl_PL.utf8";
     LC_NAME = "pl_PL.utf8";
     LC_NUMERIC = "pl_PL.utf8";
@@ -91,6 +92,10 @@ nix.extraOptions = ''
     description = "sileanth";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+spotify
+discord
+
+gh
 git
 neovim      
 firefox
