@@ -25,6 +25,7 @@
         cabal-install
         stack
 	ranger
+	godot
  ];
   # Let Home Manager install and manage itself.
    programs = {
