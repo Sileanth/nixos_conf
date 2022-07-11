@@ -31,9 +31,9 @@
 	git = {
     		enable = true;
     		extraConfig = {
-      			credential.helper = "${
-          			pkgs.git.override { withLibsecret = true; }
-        		}/bin/git-credential-libsecret";
+      			#credential.helper = "${
+          		#	pkgs.git.override { withLibsecret = true; }
+        		#}/bin/git-credential-libsecret";
     		};
 		aliases = {
 			co = "checkout";
@@ -43,6 +43,12 @@
   	};
 	alacritty = {
 		enable = true;
+	};
+	kitty = {
+		enable = true;
+		settings = {
+		};
+		theme = "Galaxy";
 	};
 
    };
