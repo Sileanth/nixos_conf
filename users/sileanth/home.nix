@@ -16,13 +16,22 @@
   # changes in each release.
   home.stateVersion = "22.05";
   # Let Home Manager install and manage itself.
-   programs.git = {
-    enable = true;
-    extraConfig = {
-      credential.helper = "${
-          pkgs.git.override { withLibsecret = true; }
-        }/bin/git-credential-libsecret";
-    };
-  };
-  programs.alacritty.enable = true;
+   home.shellAliases = {
+   	nixconf = "cd ~/nix_conf";
+	apply_config = "sudo nixos-rebuild swith --flake ~/nixos_conf#inspiron";
+   };
+   programs = {
+   	git = {
+    		enable = true;
+    		extraConfig = {
+      			credential.helper = "${
+          			pkgs.git.override { withLibsecret = true; }
+        		}/bin/git-credential-libsecret";
+    		};
+  	};
+	alacritty = {
+		enable = true;
+	};
+
+   };
 }
