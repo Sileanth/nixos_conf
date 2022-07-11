@@ -6,16 +6,17 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    [ 
+      ./hardware/hardware-configuration.nix
+      ./hardware/hardware-own.nix
       ./display/display.nix
     ];
 
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+ # boot.loader.systemd-boot.enable = true;
+ # boot.loader.efi.canTouchEfiVariables = true;
+ # boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   networking.hostName = "inspiron"; # Define your hostname.
   networking.networkmanager.enable = true;
@@ -42,31 +43,7 @@ i18n.extraLocaleSettings = {
     LC_TIME = "pl_PL.utf8";
   };
 
-  # Enable the X11 windowing system.
 
-#  services.xserver = {
-#    enable = true;
-#
- #   desktopManager = {
-  #    xterm.enable = false;
- #     plasma5.enable = true;
- #   };
- #  
- #   displayManager = {
- #       sddm.enable = true;
-#	defaultSession = "none+i3";
- #   };
-#
- #   windowManager.i3 = {
-  #    enable = true;
-   #   extraPackages = with pkgs; [
-    #    dmenu #application launcher most people use
-     #   i3status # gives you the default i3 status bar
-     #   i3lock #default i3 screen locker
-     #   i3blocks #if you are planning on using i3blocks over i3status
-   #  ];
-  #  };
-  #};
   # Configure keymap in X11
   services.xserver = {
     layout = "pl";
