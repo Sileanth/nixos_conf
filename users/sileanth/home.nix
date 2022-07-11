@@ -24,6 +24,7 @@
         haskellPackages.hoogle
         cabal-install
         stack
+	ranger
  ];
   # Let Home Manager install and manage itself.
    programs = {
