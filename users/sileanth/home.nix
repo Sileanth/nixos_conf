@@ -37,6 +37,8 @@
     		};
 		aliases = {
 			co = "checkout";
+			com = "commit -m";
+			all = "add --all";
 		};
 		userEmail = "lukasz.magnuszewski@gmail.com";
 		userName = "Łukasz Magnuszewski";
