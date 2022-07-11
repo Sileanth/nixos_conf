@@ -26,6 +26,16 @@
 			     	];
 
 			};
+			xmonad = {
+    				enable = true;
+				      enableContribAndExtras = true;
+				      extraPackages = haskellPackages: [
+					      haskellPackages.dbus
+					      haskellPackages.List
+					      haskellPackages.monad-logger
+					      haskellPackages.xmonad
+				    	];
+			};
 	
 		};
 	};
