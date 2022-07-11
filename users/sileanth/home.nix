@@ -52,6 +52,20 @@
 		};
 		theme = "Galaxy";
 	};
-
+	vscode = {
+		enable = true;
+		extensions = [];
+	};
+	zsh = {
+		enable = true;
+		enableAutosuggestions = true;
+		enableSyntaxHighlighting = true;
+		autocd = true;
+		shellAliases = {
+			".." = "cd ..";
+			nix-build = "sudo nixos-rebuild switch --flake ~/nix_conf#";
+			nix-conf = "cd ~/nix_conf";
+		};
+	};
    };
 }
