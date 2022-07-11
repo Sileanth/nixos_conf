@@ -10,13 +10,8 @@
       ./hardware/hardware-configuration.nix
       ./hardware/hardware-own.nix
       ./display/display.nix
+      ./users/users.nix
     ];
-
-
-  # Bootloader.
- # boot.loader.systemd-boot.enable = true;
- # boot.loader.efi.canTouchEfiVariables = true;
- # boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   networking.hostName = "inspiron"; # Define your hostname.
   networking.networkmanager.enable = true;
@@ -76,25 +71,7 @@ i18n.extraLocaleSettings = {
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.sileanth = {
-    isNormalUser = true;
-    description = "sileanth";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-	spotify
-	discord
-	gh
-	gitkraken
-	git
-	neovim      
-	firefox
-    ];
-  };
 
-  # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "sileanth";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
