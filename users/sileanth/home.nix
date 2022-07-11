@@ -15,6 +15,7 @@
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "22.05";
+  home.packages = [ pkgs.jetbrains.pycharm-professional pkgs.spotify pkgs.discord];
   # Let Home Manager install and manage itself.
    programs = {
    	gh = {
@@ -63,7 +64,7 @@
 		autocd = true;
 		shellAliases = {
 			".." = "cd ..";
-			nix-build = "sudo nixos-rebuild switch --flake ~/nix_conf#";
+			nix-build = "sudo nixos-rebuild switch --flake ~/nix_conf#inspiron";
 			nix-conf = "cd ~/nix_conf";
 		};
 	};

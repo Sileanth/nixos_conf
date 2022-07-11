@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./display/display.nix
     ];
 
 
@@ -43,29 +44,29 @@ i18n.extraLocaleSettings = {
 
   # Enable the X11 windowing system.
 
-  services.xserver = {
-    enable = true;
-
-    desktopManager = {
-      xterm.enable = false;
-      plasma5.enable = true;
-    };
-   
-    displayManager = {
-        sddm.enable = true;
-	defaultSession = "none+i3";
-    };
-
-    windowManager.i3 = {
-      enable = true;
-      extraPackages = with pkgs; [
-        dmenu #application launcher most people use
-        i3status # gives you the default i3 status bar
-        i3lock #default i3 screen locker
-        i3blocks #if you are planning on using i3blocks over i3status
-     ];
-    };
-  };
+#  services.xserver = {
+#    enable = true;
+#
+ #   desktopManager = {
+  #    xterm.enable = false;
+ #     plasma5.enable = true;
+ #   };
+ #  
+ #   displayManager = {
+ #       sddm.enable = true;
+#	defaultSession = "none+i3";
+ #   };
+#
+ #   windowManager.i3 = {
+  #    enable = true;
+   #   extraPackages = with pkgs; [
+    #    dmenu #application launcher most people use
+     #   i3status # gives you the default i3 status bar
+     #   i3lock #default i3 screen locker
+     #   i3blocks #if you are planning on using i3blocks over i3status
+   #  ];
+  #  };
+  #};
   # Configure keymap in X11
   services.xserver = {
     layout = "pl";
