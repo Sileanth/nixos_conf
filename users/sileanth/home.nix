@@ -15,11 +15,15 @@
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "22.05";
-  home.packages = [ 
-  	pkgs.jetbrains.pycharm-professional 
-	pkgs.spotify 
-	pkgs.discord
-	pkgs.gitkraken
+  home.packages = with pkgs; [ 
+  	jetbrains.pycharm-professional 
+	spotify 
+	discord
+	gitkraken
+	haskellPackages.haskell-language-server
+        haskellPackages.hoogle
+        cabal-install
+        stack
  ];
   # Let Home Manager install and manage itself.
    programs = {
