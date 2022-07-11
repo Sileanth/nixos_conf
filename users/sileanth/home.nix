@@ -16,18 +16,30 @@
   # changes in each release.
   home.stateVersion = "22.05";
   # Let Home Manager install and manage itself.
-   home.shellAliases = {
-   	nixconf = "cd ~/nix_conf";
-	apply_config = "sudo nixos-rebuild swith --flake ~/nixos_conf#inspiron";
-   };
    programs = {
-   	git = {
+   	gh = {
+		enable = true;
+		enableGitCredentialHelper = true;
+		settings = {
+			git_protocol = "ssh";
+			aliases = {
+
+			};
+			editor = "nvim";
+		};
+	};
+	git = {
     		enable = true;
     		extraConfig = {
       			credential.helper = "${
           			pkgs.git.override { withLibsecret = true; }
         		}/bin/git-credential-libsecret";
     		};
+		aliases = {
+			co = "checkout";
+		};
+		userEmail = "lukasz.magnuszewski@gmail.com";
+		userName = "Łukasz Magnuszewski";
   	};
 	alacritty = {
 		enable = true;

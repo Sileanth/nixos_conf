@@ -104,16 +104,13 @@ i18n.extraLocaleSettings = {
     description = "sileanth";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-spotify
-discord
-
-gh
-gitkraken
-git
-neovim      
-firefox
-      kate
-    #  thunderbird
+	spotify
+	discord
+	gh
+	gitkraken
+	git
+	neovim      
+	firefox
     ];
   };
 
