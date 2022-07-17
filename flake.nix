@@ -31,6 +31,17 @@
           				}
 				];
 			};
+			xpsik = lib.nixosSystem {
+                                inherit system;
+                                modules = [
+                                        ./conf-xps.nix
+                                         home-manager.nixosModules.home-manager {
+                                                home-manager.useGlobalPkgs = true;
+                                                home-manager.useUserPackages = true;
+                                                home-manager.users.sileanth = import ./users/sileanth/home.nix;
+                                        }
+                                ];
+                        };
 		};
 	};
 
