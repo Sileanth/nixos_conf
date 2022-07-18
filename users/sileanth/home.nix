@@ -25,7 +25,10 @@
         cabal-install
         stack
 	ranger
-	godot
+	coq
+jetbrains.clion	
+godot
+elan
  ];
   # Let Home Manager install and manage itself.
    programs = {
