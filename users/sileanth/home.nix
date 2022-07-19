@@ -22,7 +22,7 @@
 	gitkraken
 		ranger
 	coq
-	cabal
+	haskellPackages.Cabal_3_6_3_0
 jetbrains.clion	
 godot
 elan
