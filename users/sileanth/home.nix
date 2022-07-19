@@ -22,6 +22,7 @@
 	gitkraken
 		ranger
 	coq
+	cabal
 jetbrains.clion	
 godot
 elan
