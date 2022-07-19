@@ -3,6 +3,9 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
+  imports = [
+	./programs/version_control/default.nix
+  ];
   home.username = "sileanth";
   home.homeDirectory = "/home/sileanth";
 
@@ -29,32 +32,32 @@ elan
  ];
   # Let Home Manager install and manage itself.
    programs = {
-   	gh = {
-		enable = true;
-		enableGitCredentialHelper = true;
-		settings = {
-			git_protocol = "ssh";
-			aliases = {
-
-			};
-			editor = "nvim";
-		};
-	};
-	git = {
-    		enable = true;
-    		extraConfig = {
-      			#credential.helper = "${
-          		#	pkgs.git.override { withLibsecret = true; }
-        		#}/bin/git-credential-libsecret";
-    		};
-		aliases = {
-			co = "checkout";
-			com = "commit -m";
-			all = "add --all";
-		};
-		userEmail = "lukasz.magnuszewski@gmail.com";
-		userName = "Łukasz Magnuszewski";
-  	};
+   #	gh = {
+#		enable = true;
+#		enableGitCredentialHelper = true;
+#		settings = {
+#			git_protocol = "ssh";
+#			aliases = {
+#
+#			};
+#			editor = "nvim";
+#		};
+#	};
+#	git = {
+#   		enable = true;
+#    		extraConfig = {
+#     			#credential.helper = "${
+#         		#	pkgs.git.override { withLibsecret = true; }
+ #       		#}/bin/git-credential-libsecret";
+  #  		};
+#		aliases = {
+#			co = "checkout";
+#			com = "commit -m";
+#			all = "add --all";
+#		};
+#		userEmail = "lukasz.magnuszewski@gmail.com";
+#		userName = "Łukasz Magnuszewski";
+ # 	};
 	alacritty = {
 		enable = true;
 	};
