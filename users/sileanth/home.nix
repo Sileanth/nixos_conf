@@ -22,6 +22,7 @@
 	gitkraken
 		ranger
 	coq
+	texlive.combined.scheme-full
 	jetbrains.clion	
 godot
 elan
