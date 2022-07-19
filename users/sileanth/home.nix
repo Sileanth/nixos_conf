@@ -20,11 +20,7 @@
 	spotify 
 	discord
 	gitkraken
-	haskellPackages.haskell-language-server
-        haskellPackages.hoogle
-        cabal-install
-        stack
-	ranger
+		ranger
 	coq
 jetbrains.clion	
 godot
