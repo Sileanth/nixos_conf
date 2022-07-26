@@ -16,6 +16,7 @@
       ./hardware/audio.nix
       ./hardware/laptop.nix
       ./hardware/print.nix
+      ./hardware/bluetooth.nix
     ];
 	#only essential settings, configure things by including modules
   	networking.hostName = "xpsik"; # Define your hostname.
