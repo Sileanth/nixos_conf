@@ -1,8 +1,8 @@
 {config, pkgs, ...}:
 
 {
-	imports = []
+	imports = [];
 
-	hardware.bluetooth.enable = true;i
+	hardware.bluetooth.enable = true;
 
 }
