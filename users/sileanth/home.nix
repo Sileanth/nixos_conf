@@ -18,7 +18,8 @@
   # changes in each release.
   home.stateVersion = "22.05";
   home.packages = with pkgs; [ 
-  	jetbrains.pycharm-professional 
+  	neofetch
+	jetbrains.pycharm-professional 
 	gparted
 	spotify 
 	discord
