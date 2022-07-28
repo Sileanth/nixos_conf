@@ -7,7 +7,6 @@
 
   home.username = "sileanth";
   home.homeDirectory = "/home/sileanth";
-  users.users.yourname.shell = pkgs.zsh;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
