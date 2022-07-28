@@ -28,8 +28,9 @@
 	coq
 	texlive.combined.scheme-full
 	jetbrains.clion	
-godot
-elan
+	godot
+	cowsay
+	elan
  ];
   # Let Home Manager install and manage itself.
    programs = {
@@ -47,9 +48,6 @@ elan
 	git = {
    		enable = true;
     		extraConfig = {
-     			#credential.helper = "${
-         		#	pkgs.git.override { withLibsecret = true; }
-       		#}/bin/git-credential-libsecret";
   		};
 		aliases = {
 			co = "checkout";
@@ -81,7 +79,7 @@ elan
 		autocd = true;
 		shellAliases = {
 			".." = "cd ..";
-			nix-build = "sudo nixos-rebuild switch --flake ~/nix_conf#inspiron";
+			nix-build = "sudo nixos-rebuild switch --flake ~/nix_conf#";
 			nix-conf = "cd ~/nix_conf";
 		};
 	};
