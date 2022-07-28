@@ -66,7 +66,7 @@ elan
 	kitty = {
 		enable = true;
 		settings = {
-			shell = zsh;
+			shell = "zsh";
 		};
 		theme = "Galaxy";
 	};
